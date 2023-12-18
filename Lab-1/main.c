@@ -96,7 +96,6 @@ void display_menu()
 
 int main()
 {
-
     Stack mainStack;
     init_stack(&mainStack, STACK_MAX_CAP);
 
@@ -111,7 +110,6 @@ int main()
         switch(choice)
         {
             case 1:
-            printf("Enter number to push in stack : ");
             printf("Enter number to push in stack : ");
             scanf("%d", &choice);
             Push(&mainStack, choice);
