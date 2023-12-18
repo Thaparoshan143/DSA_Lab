@@ -112,6 +112,7 @@ int main()
         {
             case 1:
             printf("Enter number to push in stack : ");
+            printf("Enter number to push in stack : ");
             scanf("%d", &choice);
             Push(&mainStack, choice);
             choice = 0;
