@@ -69,7 +69,7 @@ void Display_Front(Queue *target)
 
 void Display(Queue *target)
 {
-    if(target->front == -1)
+    if(target->rear == target->front)
     {
         printf("\n ** No element in Queue **\n");
         return;
