@@ -261,7 +261,7 @@ int main()
             choice = 0;
             break;
             case 5:
-            choice = get_int_input("Enter element to seach for : ");
+            choice = get_int_input("Enter element to inset in end : ");
             Insert_End(&start, choice);
             choice = 0;
             break;
