@@ -148,10 +148,9 @@ Node* SearchElement(Node *root, int val)
     }
     else 
     {
-        SearchElement(root->left, val);
-        SearchElement(root->right, val);
+        return SearchElement(root->left, val);
+        return SearchElement(root->right, val);
     }
-    return NULL;
 }
 
 Node* DoesEleExist(Node *root, int ele)
@@ -187,13 +186,18 @@ void DeleteNode(Node **root, int ele)
     {
         return;
     }
-    if((*root)->left == NULL && (*root)->right == NULL)
+    if((*root)->data == ele)
     {
-        if((*root)->data == ele)
+        if((*root)->left == NULL && (*root)->right == NULL)
         {
             free(*root);
             *root = NULL;
         }
+        else
+        {
+            StichNode(root, *root);
+        }
+        return;
     }
     Node *searchNode = DoesEleExist((*root)->left, ele);
 
